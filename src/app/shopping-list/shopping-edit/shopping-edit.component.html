@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-sm-12">
+      <form #recipeForm="ngForm" (ngSubmit)="addIngredienttoCart(recipeForm)">
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label for="name">Name</label>
+          <!-- using forms. or template forms. -->
+          <input name="text" name="recipeName" id="recipeName"  class="form-control" ngModel required #recipeName="ngModel" pattern="[a-zA-Z\s]*">
+          <span *ngIf="recipeName.touched && !recipeName.valid" [ngStyle]="{'color': 'red'}">Enter a recipe </span>
+          <!-- using 2 way binding -->
+          <!-- <input name="text" name="name" id="name" [(ngModel)]="nameInput" class="form-control" ngModel> -->
+        </div>
+        <!-- using local refernce -->
+        <!-- <input name="text" name="name" id="name" #nameInput class="form-control"> -->
+        <div class="col-sm-2 form-group">
+          <label for="amount">Amount</label>
+          <!-- using local reference. -->
+          <!-- <input type="number" name="recipeAmount" id="amount" #amountInput
+                 class="form-congrol" ngModel> -->
+
+          <input type="number" name="recipeAmount" id="amount" #amountInput="ngModel"
+                 class="form-congrol" ngModel required pattern="^[1-9]+[0-9]*$">
+          <span *ngIf="!amountInput.valid && amountInput.touched">enter a valid amount </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 btn-group" role="group">
+          <!-- <button type="submit" class="btn btn-success mr-0" (click)="addToShoppingList()">Add </button> -->
+          <button type="submit" class="btn btn-success mr-2" [disabled]= "!recipeForm.valid" #mode>{{ editMode ? 'Update' : 'Add' }} </button>
+          <button type="button" class="btn btn-danger mr-2" (click)="deleteIngredient()" *ngIf="editMode">Remove </button>
+          <button type="button" class="btn btn-primary mr-2" (click)="clearForm()">Clear </button>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+</div>

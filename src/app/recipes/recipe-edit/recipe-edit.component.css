@@ -1,0 +1,27 @@
+.btn-100 {
+  width:150px;
+}
+
+.align-right {
+text-align: right;
+float: right;
+}
+.align-left {
+  text-align:left;
+}
+
+.float-right {
+  float:right;
+}
+
+.float-left {
+  float:left;
+}
+
+label, .bold {
+  font-weight: bold;
+}
+
+input.ng-touched.ng-invalid, textarea.ng-touched.ng-invalid {
+  border:1px solid #81038a;
+}

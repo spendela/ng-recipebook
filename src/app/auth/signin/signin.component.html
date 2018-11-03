@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Sign in to your account to make the changes!</h2>
+      <form #authFormSignin="ngForm" (ngSubmit)="onSignin(authFormSignin)">
+        <div class="form-group">
+          <label for="email">email</label>
+          <input type="text" id="email" name="email" ngModel class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" minlength="6" id="password" name="password" ngModel class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!authFormSignin.valid">Sign in</button>
+      </form>
+    </div>
+  </div>
+</div>

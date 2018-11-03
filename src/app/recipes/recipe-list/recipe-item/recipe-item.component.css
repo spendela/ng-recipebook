@@ -1,0 +1,60 @@
+
+.scard {
+  position: relative;
+  width: 400px;
+  height: 200px !important;
+  margin: 1rem auto;
+  background-color: rgb(153, 166, 179);
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.image {
+  width: 400px;
+  height: 400px !important;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition-property: transform;
+  transition-duration: 2.4s;
+  top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.caption {
+  position: relative;
+  margin-left: -20px;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  width: 400px;
+  height: 100px;
+  background-color: #ffffff;
+  padding: 15px;
+  transform: translateY(100%);
+  backface-visibility: hidden;
+  transition: transform 1.4s, opacity 0.1s 0.3s;
+}
+
+.caption-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.caption-content {
+  margin: 0;
+}
+
+
+.slide-up:hover .image {
+  bottom:0;
+  transform: translateY(-150px);
+}
+
+.slide-up:hover .caption {
+  opacity: 1;
+  transform: translateY(-10px);
+  transition: transform 1.4s, opacity 0.1s;
+}

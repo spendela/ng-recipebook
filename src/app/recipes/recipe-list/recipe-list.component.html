@@ -1,0 +1,23 @@
+<div class="row mt-5">
+  <div class="col-sm-12 new-recipe">
+      <!-- <div class="btn btn-success" [routerLink]="['new']" >New Recipe</div> -->
+      <div class="btn btn-success" (click)="createNewRecipe()">New Recipe</div>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-sm-12">
+
+      <!-- <app-recipe-item
+          *ngFor="let eachRecipe of recipes"
+          [recipe]= "eachRecipe"
+          (recipeSelectedInComponent)="onRecipeSelected(eachRecipe)"
+      ></app-recipe-item> -->
+      <app-recipe-item
+          *ngFor="let eachRecipe of recipes; let i = index"
+          [recipe]= "eachRecipe"
+          [index]=i
+      ></app-recipe-item>
+  </div>
+</div>
+

@@ -1,0 +1,27 @@
+<!-- -to the router link we are passing index that is :id -you want to attach to the /recipies -->
+<div class="scard slide-up">
+  <!-- if we have exact is true, any futher children will not have a active class. -->
+  <!-- <a style="cursor: pointer" class="list-group-item clearfix"
+    [routerLink]="[index]" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active"
+> -->
+
+  <a style="cursor: pointer" class="list-group-item clearfix" [routerLink]="[index]" routerLinkActive="active">
+
+    <div class="image" [ngStyle]="{'background-image': 'url('+ recipe.imagePath +')'}">&nbsp;</div>
+
+    <div class="caption">
+      <h2 class="caption-title">{{recipe.name}} </h2>
+      <p class="caption-content">
+        {{recipe.description}}
+      </p>
+    </div>
+
+    <!-- <div class="float-left">
+      <h4 class="list-group-item-header">{{recipe.name}} </h4>
+      <p class="list-group-item-info"> {{recipe.description }}</p>
+    </div>
+    <div class="float-right">
+      <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-fluid" style="max-height:100px;">
+    </div> -->
+  </a>
+</div>

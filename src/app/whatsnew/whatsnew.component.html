@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-sm-12 card p-3">
+      <h2 class="card-title"> TO DO:</h2>
+      <ul class="card-text">
+        <li>Added Login and logout in the header section.</li>
+        <li>Add canActivate and canDeactivate route gaurds to allow only admins to add remove recipes </li>
+        <li>Subscribe to login and logout tokens for any changes from the server.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-sm-12 card p-3">
+      <h2 class="card-title">Version 7.0 </h2>
+      <h4 class="card-text">Whats new?</h4>
+      <ul class="card-text">
+        <li>Authentication to firebase.</li>
+        <li>Added protected routes to <code>/new</code> and <code>/edit</code> pages. </li>
+        <li>Refactored the code to use individual modules and routes. </li>
+        <li>For the recipe section, we are using lazy loading </li>
+        <li>To lazy load a canActivate guard use: <code>canLoad: []</code></li>
+        <li>Using pre-loading stratergy to load the lazyloaded modules - which is defined in the app-routing module<br>
+            <code>  preLoadingStratergy: PreloadAllModules </code></li>
+        <li><code>ng build --prod --aot</code> ( builds the project for prod use and uses Ahead-Of-Time Compilation technique) </li>
+        <li><code>base href</code> in the index.html should point to the subdirectory where the app is hosted. <br>
+        if its in the root directory then the href value will be <code> < base href="/" > </code> else it will be <br>
+         <code>< base href="/my-app/" ></code> , if the location of the app is <code>www.yourdomain.com/my-app/</code> </li>
+         <li>you can set the <code>base-ref</code> which building the app for prod --- using -- <code>ng build --prod --aot --base-href /my-app/ </code> </li>
+         <li>To add SSL to your app: in your <code> angular.json </code>file  under ---<br>
+              <code> "serve":</code> <br>
+              <code>"builder": "@angular-devkit/build-angular:dev-server",</code><br>
+              <code>"options":</code><br>
+              <code>"browserTarget": "course-proj:build",</code><br>
+              <code>"ssl": false,</code><br>
+              <code>"sslKey": "f:/code/angular/ssl/server.key",</code><br>
+              <code>"sslCert": "f:/code/angular/ssl/server.cert"</code><br>
+            ,</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-sm-12 card p-3">
+      <h2 class="card-title">Version 6.0 </h2>
+      <h4 class="card-text">Features</h4>
+      <ul class="card-text">
+        <li>Will be adding http access to firebase.</li>
+        <li><code>http.post </code>-> posts to the data to the db, while appending the previous data. </li>
+        <li><code>http.put </code>-> puts to the data to the db, its just creates new data </li>
+        <li><code>http.get </code>-> gets the data to the db </li>
+        <li>each http.get or http.put returns an <code>observablee</code>, so make sure you subscribe.</li>
+        <li>one call can have multiple or sequential <code>puts</code> or <code>get</code>. So, to emit multiple<br>
+            observables in <b>one return call statement</b>, use <code>combineLatest()</code> ( e.g: <code>combineLatest(responseObservable) </code>) from rxjs.<br>
+            Note: you should handle multiple return responses in your <code>subscribe()</code> method.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-sm-12 card p-3">
+      <h2 class="card-title">Version 5.0 </h2>
+      <h4 class="card-text">features in?</h4>
+      <ul class="card-text">
+        <li>Added forms for recipes and shopping cart</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <hr>
+    <div class="col-sm-12 card p-3">
+      <h2 class="card-title">version: 4.0</h2>
+      <h4 class="card-header">Features brought in</h4>
+      <ul class="card-text">
+        <li>Observables</li>
+        <li>The Ingredients are cummulative - both from the recipe section and shopping cart section.</li>
+      </ul>
+    </div>
+  </div>
+</div>

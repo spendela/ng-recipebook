@@ -1,0 +1,23 @@
+h2 {
+  color: #90229e;
+}
+
+h4 {
+  color: rgb(17, 128, 27);
+}
+
+ul li {
+  color: #3b3a36;
+  line-height: 1.2rem;
+}
+
+div.row div:nth-child(2n+1) {
+  background-color: #76dae7;
+  color:white;
+
+
+}
+div.row div:nth-child(2n) {
+  background-color: #cc65c7;
+  color:white;
+}

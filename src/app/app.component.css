@@ -1,0 +1,19 @@
+h1 {
+  font-family: 'Caveat';
+  font-size: 2rem;
+  color: #57233A;
+  font-weight:800;
+}
+h2 {
+  font-family : 'Ink free';
+  font-size: 1.7rem;
+  color: #1E3815;
+}
+
+.flex {
+  display:flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
